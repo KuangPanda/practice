@@ -1,0 +1,45 @@
+2016-10-01:
+1.邮件过滤的主要工具是基于文本分类.分类器是一个用分类方法将传入信息判定为合法或非法的系统。首先我们要用一个
+训练集（大量的数据）产生一个用于判断是否为垃圾邮件的词库（describes an approach for spam filtering using Python where the interesting
+spam or ham words (spam-ham lexicon) are filtered first from the training dataset and then
+this lexicon is used to generate the training and testing tables that are used by variety of data
+mining algorithms. Our experimentation using one dataset reveals the affectivity of the Naïve
+Bayes and the SVM classifiers for spam filtering)主要的实现方法是：朴素贝叶斯和支持向量机
+2.关于垃圾邮件的介绍：垃圾邮件是针对在批量发送未经请求的UCE的流行词
+3.where they rely on statistical features of spam. These types of filters scan and analyze the
+entire email before making a decision on whether the email is spam or not. They compare the
+new email against a database/dataset of known spam emails and can match up whether the
+message is spam or not.依靠垃圾邮件的统计学特性 扫描整个邮件 和数据库中的进行比较从而得出结果
+2016-10-02：
+1.监督学习：是指在对已有的数据集采用算法进行预测后会得到一个方程 然后将数据带入可以得到相应的结果 主要有
+回归问题和分类问题。每个数据集都有相应的特征即正确答案。
+2.无监督学习：聚类算法 每个数据集都没有相应的特征 没有提前告诉算法（垃圾邮件分类是监督学习的例子）
+3.线性回归：样本数量i(0<i<=M,M为样本总数) 输入的变量/特征（x 比如垃圾邮件中的敏感词汇的数量占该邮件中总词汇的概率）
+输出变量y 预测的结果 训练样本将用(x[i],y[i])来表示 首先利用学习算法(逻辑回归)对数据集进行处理得到相应的假设
+函数 在将你需要预测的数据输入假设函数得到相应的结果
+3.1：代价函数(cost function)：idea：choose a,b so that h(x) is close to y for our training examples(x,y)
+minimze (h(x)-y)^2   minimize(a,b)  求相应的1/2M(平均误差)Sum(h(x)-y)^2使得其值最小a,b那么假设函数可以表示为
+h(x)=a*x+b(线性回归)   
+Hypothesis:h(x)=a*x+b  Parameters:a,b  CostFunction:J(a,b)=1/2MSum(h(x)-y)^2 Goal Minimize J(a,b)
+轮廓图：值域图对于更高维度的很难通过画图来实现相应的假设函数
+梯度下降：
+   
+2016-10-03：
+idea:
+1.In e-mail filtering task some features could be the bag of words or the subjectline analysis.
+Thus, the input to e-mail classification task can be viewed as a two dimensional matrix, whose axes
+are the messages and the features.E-mail classification tasks are often divided into several sub-tasks.
+First, Data collection and representation are mostly problem-specific(i.e. e-mail messages).
+second, e-mail feature selection and feature reduction attempt to reduce the dimensionality 
+(i.e. the number of features) for the remaining steps of the task.Finally, the e-mail classification
+phase of the process finds the actual mapping between training set and testing set.
+In the following section we will review some of the most popular machine learning methods.
+A:Naive Bayes,bayesian classifier is working on the dependent 
+events and the probability of an event occuring in the future that can 
+be detected from the previous occuring of the same event;Words probabilities play the main rule here
+If some words occur often in spam but not in ham, then this incoming e-mail is probably spam
+Every word has certain probability of occuring in spam or ham email in its database,if the total
+of words probabilites exceeds a certain limit the filter will mark the email to either category
+
+期间正在看有关机器学习的视频 记录的情况会整理贴出来
+come on
